@@ -1,6 +1,6 @@
-package com.marciani.sample.service;
+package br.com.prenatal.service;
 
-import com.marciani.sample.entity.user.model.User;
+import br.com.prenatal.entity.user.model.User;
 
 public interface UserService {	
     public void saveUser(User user);

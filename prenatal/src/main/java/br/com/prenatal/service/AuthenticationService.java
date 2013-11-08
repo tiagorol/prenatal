@@ -1,4 +1,4 @@
-package com.marciani.sample.service;
+package br.com.prenatal.service;
 
 import java.io.Serializable;
 
@@ -11,7 +11,7 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 
-import com.marciani.sample.entity.user.model.Usuario;
+import br.com.prenatal.entity.user.model.Usuario;
 
 @Component("authenticationService")
 public class AuthenticationService implements Serializable {

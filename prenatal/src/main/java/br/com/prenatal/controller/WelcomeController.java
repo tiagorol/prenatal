@@ -1,4 +1,4 @@
-package com.marciani.sample.controller;
+package br.com.prenatal.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -6,7 +6,8 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import com.marciani.sample.service.UserService;
+
+import br.com.prenatal.service.UserService;
 
 @Controller
 @RequestMapping("/")

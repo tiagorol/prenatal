@@ -27,8 +27,8 @@
     	<property name="dataSource" ref="dataSource" />
     	<property name="annotatedClasses">
     	    <list>
-    	        <value>com.marciani.sample.entity.user.model.User</value>
-    	        <value>com.marciani.sample.entity.user.model.Usuario</value>
+    	        <value>br.com.prenatal.entity.user.model.User</value>
+    	        <value>br.com.prenatal.entity.user.model.Usuario</value>
     	    </list>    	     
     	</property>
     	<property name="hibernateProperties">

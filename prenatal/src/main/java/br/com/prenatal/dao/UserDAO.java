@@ -1,10 +1,10 @@
-package com.marciani.sample.dao;
+package br.com.prenatal.dao;
 
 import java.util.List;
 
 import org.hibernate.criterion.Criterion;
 
-import com.marciani.sample.entity.user.model.User;
+import br.com.prenatal.entity.user.model.User;
 
 public interface UserDAO {
 	public void saveUser(User user);

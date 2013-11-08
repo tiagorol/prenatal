@@ -1,4 +1,4 @@
-package com.marciani.sample.entity.user.dao;
+package br.com.prenatal.entity.user.dao;
 
 import java.util.List;
 
@@ -9,8 +9,8 @@ import org.hibernate.criterion.Criterion;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.marciani.sample.dao.UserDAO;
-import com.marciani.sample.entity.user.model.User;
+import br.com.prenatal.dao.UserDAO;
+import br.com.prenatal.entity.user.model.User;
 
 @Repository
 public class UserDAOImpl implements UserDAO {

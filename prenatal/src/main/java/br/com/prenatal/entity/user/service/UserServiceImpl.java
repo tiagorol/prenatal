@@ -1,4 +1,4 @@
-package com.marciani.sample.entity.user.service;
+package br.com.prenatal.entity.user.service;
 
 import java.util.List;
 
@@ -7,9 +7,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.marciani.sample.dao.UserDAO;
-import com.marciani.sample.entity.user.model.User;
-import com.marciani.sample.service.UserService;
+import br.com.prenatal.dao.UserDAO;
+import br.com.prenatal.entity.user.model.User;
+import br.com.prenatal.service.UserService;
 
 @Service("userService")
 public class UserServiceImpl implements UserService {

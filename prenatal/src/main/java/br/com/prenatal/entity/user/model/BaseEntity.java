@@ -1,4 +1,4 @@
-package com.marciani.sample.entity.user.model;
+package br.com.prenatal.entity.user.model;
 
 import java.io.Serializable;
 

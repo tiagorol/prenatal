@@ -1,8 +1,8 @@
-package com.marciani.sample.service;
+package br.com.prenatal.service;
 
 import org.springframework.stereotype.Service;
 
-import com.marciani.sample.entity.user.model.Usuario;
+import br.com.prenatal.entity.user.model.Usuario;
 
 @Service
 public class UsuarioService {
