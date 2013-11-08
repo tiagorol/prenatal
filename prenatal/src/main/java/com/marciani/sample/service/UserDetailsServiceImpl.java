@@ -3,6 +3,7 @@ package com.marciani.sample.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -15,16 +16,14 @@ import com.marciani.sample.entity.user.model.Usuario;
 @Component("userDetailsService")
 public class UserDetailsServiceImpl implements UserDetailsService {
 
-//	 @Autowired
-//	 private UsuarioService usuarioService;
+	 @Autowired
+	 private UsuarioService usuarioService;
 
 	private static final String ADMIN_ROOT = "ADMIN_ROOT";
 
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-		// Usuario usuario = usuarioService.findByLoginAtivo(username);
-
-		Usuario usuario = null;
+		Usuario usuario = usuarioService.buscarPorEmailAtivo(username);
 
 		if (usuario == null) {
 			throw new UsernameNotFoundException("Usuario nao encontrado");
