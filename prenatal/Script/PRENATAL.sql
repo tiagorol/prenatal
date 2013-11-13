@@ -45,7 +45,7 @@ ALTER TABLE cidade_id_seq
   OWNER TO root;  
 
   --GESTANTE 
-  CREATE TABLE gestante
+ CREATE TABLE gestante
 (
   id bigint NOT NULL,
   nome character varying(80) NOT NULL,
@@ -60,9 +60,7 @@ ALTER TABLE cidade_id_seq
   data_nascimento date NOT NULL,
   estado_id bigint NOT NULL REFERENCES estado(id),
   cidade_id bigint NOT NULL REFERENCES cidade(id),
-  CONSTRAINT usuario_pkey PRIMARY KEY (id)
- 
-  
+  CONSTRAINT gestante_pkey PRIMARY KEY (id)
 )
 WITH (
   OIDS=FALSE
@@ -77,4 +75,4 @@ ALTER TABLE gestante
   START 1
   CACHE 1;
 ALTER TABLE gestante_id_seq
-  OWNER TO root;  
+  OWNER TO root;
