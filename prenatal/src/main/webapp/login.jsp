@@ -19,7 +19,7 @@
 				</tr>
 				<tr>
 					<td>Senha:</td>
-					<td><input type="text" name="senha" /></td>
+					<td><input type="password" name="senha" /></td>
 				</tr>
 				<tr>
 					<td></td>

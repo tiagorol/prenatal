@@ -18,15 +18,9 @@ public class LoginController {
 	
 	@RequestMapping(value = "logar", method = RequestMethod.POST)
 	public String logar(@RequestParam(value = "email") String email, @RequestParam(value = "senha") String senha, ModelMap model) {
-		
-		System.out.println("CHEGOU AQUI!!!");
-		System.out.println(email);
-		
 		boolean success = authenticationService.login(email, senha);
-		
 		model.addAttribute("message", "Success");
-		
-		return success ? "index" : "login.jsp";
+		return success ? "index" : "login";
 	}
 
 }
