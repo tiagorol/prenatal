@@ -1,3 +1,4 @@
+--ESTADO
 CREATE TABLE estado
 (
   id bigint NOT NULL,
@@ -20,7 +21,8 @@ ALTER TABLE estado
 ALTER TABLE estado_id_seq
   OWNER TO root;
   
-  CREATE TABLE cidade
+--CIDADE
+CREATE TABLE cidade
 (
   id bigint NOT NULL,
   nome character varying(255) NOT NULL,
@@ -41,3 +43,4 @@ CREATE SEQUENCE cidade_id_seq
   CACHE 1;
 ALTER TABLE cidade_id_seq
   OWNER TO root;  
+  
