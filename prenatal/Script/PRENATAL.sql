@@ -3,7 +3,7 @@ CREATE TABLE estado
 (
   id bigint NOT NULL,
   nome character varying(80) NOT NULL,
-  sigla character varying(2),
+  sigla character varying(2) NOT NULL,
  CONSTRAINT estado_pkey PRIMARY KEY(id)
 )
 WITH (
