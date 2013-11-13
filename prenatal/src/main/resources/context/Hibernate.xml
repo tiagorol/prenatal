@@ -28,7 +28,7 @@
     	<property name="annotatedClasses">
     	    <list>
     	        <value>br.com.prenatal.entity.user.model.User</value>
-    	        <value>br.com.prenatal.entity.user.model.Usuario</value>
+    	        <value>br.com.prenatal.entity.Usuario</value>
     	    </list>    	     
     	</property>
     	<property name="hibernateProperties">
