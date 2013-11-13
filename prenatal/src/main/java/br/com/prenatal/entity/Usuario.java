@@ -1,4 +1,4 @@
-package br.com.prenatal.entity.user.model;
+package br.com.prenatal.entity;
 
 import java.util.Collection;
 
@@ -11,6 +11,8 @@ import javax.validation.constraints.Size;
 import org.hibernate.validator.constraints.Email;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+
+import br.com.prenatal.entity.user.model.BaseEntity;
 
 @Entity
 @SequenceGenerator(name = "SEQUENCE", sequenceName = "usuario_id_seq")

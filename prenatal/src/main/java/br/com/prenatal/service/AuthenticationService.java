@@ -11,7 +11,7 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 
-import br.com.prenatal.entity.user.model.Usuario;
+import br.com.prenatal.entity.Usuario;
 
 @Component("authenticationService")
 public class AuthenticationService implements Serializable {

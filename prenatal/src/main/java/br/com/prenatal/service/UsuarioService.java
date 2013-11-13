@@ -2,7 +2,7 @@ package br.com.prenatal.service;
 
 import org.springframework.stereotype.Service;
 
-import br.com.prenatal.entity.user.model.Usuario;
+import br.com.prenatal.entity.Usuario;
 
 @Service
 public class UsuarioService {

@@ -10,7 +10,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 
-import br.com.prenatal.entity.user.model.Usuario;
+import br.com.prenatal.entity.Usuario;
 
 
 @Component("userDetailsService")
