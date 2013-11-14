@@ -30,7 +30,7 @@ public class Cidade extends BaseEntity {
 		this.nome = nome;
 	}
 
-	public Estado getEstado() {
+	public Estado getEstado () {
 		return estado;
 	}
 

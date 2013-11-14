@@ -4,6 +4,8 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
@@ -12,6 +14,8 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import br.com.prenatal.entity.enumeration.EstadoCivil;
+import br.com.prenatal.entity.enumeration.GrauEscolaridade;
 import br.com.prenatal.entity.user.model.BaseEntity;
 
 @Entity
@@ -25,11 +29,13 @@ public class Gestante extends BaseEntity {
 	private String nome;
 
 	@NotNull
+	@Enumerated(EnumType.ORDINAL)
 	@Column(name = "estado_civil")
-	private Integer estadoCivil;
+	private EstadoCivil estadoCivil;
 
 	@NotNull
-	private Integer escolaridade;
+	@Enumerated(EnumType.ORDINAL)
+	private GrauEscolaridade escolaridade;
 
 	@NotNull
 	@Size(min = 2, max = 255)
@@ -76,20 +82,12 @@ public class Gestante extends BaseEntity {
 		this.nome = nome;
 	}
 
-	public Integer getEstadoCivil() {
+	public EstadoCivil getEstadoCivil() {
 		return estadoCivil;
 	}
 
-	public void setEstadoCivil(Integer estadoCivil) {
+	public void setEstadoCivil(EstadoCivil estadoCivil) {
 		this.estadoCivil = estadoCivil;
-	}
-
-	public Integer getEscolaridade() {
-		return escolaridade;
-	}
-
-	public void setEscolaridade(Integer escolaridade) {
-		this.escolaridade = escolaridade;
 	}
 
 	public String getProfissao() {
@@ -164,4 +162,11 @@ public class Gestante extends BaseEntity {
 		this.usuario = usuario;
 	}
 
+	public GrauEscolaridade getEscolaridade() {
+		return escolaridade;
+	}
+
+	public void setEscolaridade(GrauEscolaridade escolaridade) {
+		this.escolaridade = escolaridade;
+	}
 }
