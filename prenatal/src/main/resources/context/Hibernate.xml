@@ -29,6 +29,9 @@
     	    <list>
     	        <value>br.com.prenatal.entity.user.model.User</value>
     	        <value>br.com.prenatal.entity.Usuario</value>
+    	        <value>br.com.prenatal.entity.Cidade</value>
+    	        <value>br.com.prenatal.entity.Estado</value>
+    	        <value>br.com.prenatal.entity.Gestante</value>
     	    </list>    	     
     	</property>
     	<property name="hibernateProperties">
