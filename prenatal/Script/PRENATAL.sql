@@ -49,7 +49,6 @@ ALTER TABLE cidade_id_seq
 (
   id bigint NOT NULL,
   nome character varying(80) NOT NULL,
-  email character varying(255) NOT NULL,
   estado_civil integer NOT NULL,
   escolaridade integer NOT NULL,
   profissao varchar (255),
@@ -60,7 +59,9 @@ ALTER TABLE cidade_id_seq
   data_nascimento date NOT NULL,
   estado_id bigint NOT NULL REFERENCES estado(id),
   cidade_id bigint NOT NULL REFERENCES cidade(id),
+  usuario_id bigint NOT NULL REFERENCES usuario(id),
   CONSTRAINT gestante_pkey PRIMARY KEY (id)
+  
 )
 WITH (
   OIDS=FALSE
