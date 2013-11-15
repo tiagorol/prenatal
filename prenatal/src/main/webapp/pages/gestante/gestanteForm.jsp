@@ -9,11 +9,52 @@
 <title>prenatal</title>
 </head>
 <body>
-	<div>
-
+	<div>		
 		<form:form modelAttribute="gestante" action="/prenatal/gestante/salvar" method="post">
-			<form:label path="nome"> Nome : </form:label><form:input path="nome" />
-			<button type="submit" id="salvar"> Salvar </button>
+			<table>
+				<tr>			
+					<td><form:label path="nome"> Nome : </form:label></td>
+					<td><form:input path="nome" /></td>
+				</tr>				
+				<tr>			
+					<td><form:label path="cpf" > CPF  : </form:label></td>
+					<td><form:input path="cpf" /></td>
+				</tr>				
+				<tr>			
+					<td><form:label path="rg"> RG : </form:label></td>
+					<td><form:input path="rg" /></td>
+				</tr>				
+				<tr>			
+					<td><form:label path="dataNascimento"> Data Nascimento : </form:label></td>
+					<td><form:input path="dataNascimento" /></td>
+				</tr>							
+				<tr>			
+					<td><form:label path="logradouro"> Logradouro : </form:label></td>
+					<td><form:input path="logradouro" /></td>
+				</tr>				
+				<tr>			
+					<td><form:label path="bairro"> Bairro : </form:label></td>
+					<td><form:input path="bairro" /></td>
+				</tr>	
+				
+				<tr>			
+					<td><form:label path="estado.id"> Estado : </form:label></td>
+					
+					<td><form:select path="estado.id"> 
+						<form:options items="${listaEstado}" itemLabel="nome" itemValue="id"/>
+					
+					</form:select>
+					</td>
+				</tr>									
+				
+				<tr>			
+					<td><form:label path="profissao"> Profissão : </form:label></td>
+					<td><form:input path="profissao" /></td>
+				</tr>				
+				<tr>
+					<td colspan="2"><button type="submit" id="salvar"> Salvar </button></td>
+				</tr>
+			</table>			
 		</form:form>
 	</div>
 	
