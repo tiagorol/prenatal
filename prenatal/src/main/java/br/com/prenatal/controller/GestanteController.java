@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import br.com.prenatal.entity.Cidade;
 import br.com.prenatal.entity.Estado;
 import br.com.prenatal.entity.Gestante;
+import br.com.prenatal.entity.enumeration.EstadoCivil;
+import br.com.prenatal.entity.enumeration.GrauEscolaridade;
 import br.com.prenatal.service.GestanteService;
 
 @Controller
@@ -54,8 +56,22 @@ public class GestanteController {
 		
 		listaCidade.add(cd1);
 		listaCidade.add(cd2);
+		
+		List<EstadoCivil> listaEstadoCivil = new ArrayList<EstadoCivil>();
+		
+		listaEstadoCivil.add(EstadoCivil.CASADO);
+		listaEstadoCivil.add(EstadoCivil.DIVORCIADO);
+		listaEstadoCivil.add(EstadoCivil.SOLTEIRO);
 
+		List<GrauEscolaridade> listaGrauEscolaridade = new ArrayList<GrauEscolaridade>();
+	
+		listaGrauEscolaridade.add(GrauEscolaridade.ANALFABETO);		
+		listaGrauEscolaridade.add(GrauEscolaridade.DOUTORADO);	
+		listaGrauEscolaridade.add(GrauEscolaridade.FUNDAMENTAL_COMPLETO);
+		
 		model.addAttribute("gestante", new Gestante());
+		model.addAttribute("listaEstadoCivil",EstadoCivil.values());
+		model.addAttribute("listaGrauEscolaridade",GrauEscolaridade.values());
 		model.addAttribute("listaCidade",listaCidade);
 		model.addAttribute("listaEstado", listaEstado);
 		return "gestante/gestanteForm";
