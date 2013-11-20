@@ -11,7 +11,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -73,6 +72,7 @@ public class Gestante extends BaseEntity {
 
 	@NotNull
 	@ManyToOne(fetch = FetchType.LAZY)
+	
 	private Usuario usuario;
 		
 	public String getNome() {

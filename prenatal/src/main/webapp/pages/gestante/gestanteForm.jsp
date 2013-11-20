@@ -79,9 +79,17 @@
 					<td><form:input path="profissao" /></td>
 				</tr>
 				<tr>
+					<td><form:label path="usuario.email"> E-mail : </form:label></td>
+					<td><form:input path="usuario.email" /></td>
+				</tr>
+				<tr>
+					<td><form:label path="usuario.senha"> Senha : </form:label></td>
+					<td><form:password path="usuario.senha" /></td>
+				</tr>
+				<tr>
 					<td colspan="2"><button type="submit" id="salvar">
 							Salvar</button></td>
-				</tr>
+				</tr>				
 			</table>
 		</form:form>
 	</div>
