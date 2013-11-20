@@ -38,6 +38,14 @@
 				</tr>	
 				
 				<tr>			
+					<td><form:label path="cidade.id"> Cidade : </form:label></td>
+					<td><form:select path="cidade.id"> 
+						<form:options items="${listaCidade}" itemLabel="nome" itemValue="id"/>
+					
+					</form:select>
+				</tr>	
+				
+				<tr>			
 					<td><form:label path="estado.id"> Estado : </form:label></td>
 					
 					<td><form:select path="estado.id"> 
