@@ -5,9 +5,7 @@ public enum EstadoCivil {
 	
 	public String toString() {
 		switch (this) {
-		case SOLTEIRO:	
-			
-			
+		case SOLTEIRO:			
 			return "Solteiro";
 		case CASADO:			
 			return "Casado";
