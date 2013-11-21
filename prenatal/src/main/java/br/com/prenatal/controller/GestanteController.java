@@ -1,15 +1,10 @@
 package br.com.prenatal.controller;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
-import br.com.prenatal.entity.Cidade;
 import br.com.prenatal.entity.Gestante;
 import br.com.prenatal.entity.enumeration.EstadoCivil;
 import br.com.prenatal.entity.enumeration.GrauEscolaridade;
@@ -32,19 +27,7 @@ public class GestanteController {
 	
 	@RequestMapping(value = "prepararInserir", method = RequestMethod.GET)
 	public String salvar(ModelMap model) {
-		
-		List<EstadoCivil> listaEstadoCivil = new ArrayList<EstadoCivil>();
-		
-		listaEstadoCivil.add(EstadoCivil.CASADO);
-		listaEstadoCivil.add(EstadoCivil.DIVORCIADO);
-		listaEstadoCivil.add(EstadoCivil.SOLTEIRO);
-
-		List<GrauEscolaridade> listaGrauEscolaridade = new ArrayList<GrauEscolaridade>();
-	
-		listaGrauEscolaridade.add(GrauEscolaridade.ANALFABETO);		
-		listaGrauEscolaridade.add(GrauEscolaridade.DOUTORADO);	
-		listaGrauEscolaridade.add(GrauEscolaridade.FUNDAMENTAL_COMPLETO);
-		
+				
 		model.addAttribute("gestante", new Gestante());
 		model.addAttribute("listaEstadoCivil",EstadoCivil.values());
 		model.addAttribute("listaGrauEscolaridade",GrauEscolaridade.values());
