@@ -7,6 +7,7 @@ public enum EstadoCivil {
 		switch (this) {
 		case SOLTEIRO:	
 			
+			
 			return "Solteiro";
 		case CASADO:			
 			return "Casado";
