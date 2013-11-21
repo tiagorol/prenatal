@@ -22,6 +22,8 @@ public class EstadosService {
 	public List<Estado> buscarTodos() {
 	
 		return getCurrentSession()
+				
+				
 				.createQuery("SELECT est FROM estado est").list();
 	}
 
