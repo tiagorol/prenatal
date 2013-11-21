@@ -4,6 +4,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import br.com.prenatal.entity.Gestante;
 
@@ -15,9 +16,11 @@ public class GestanteService {
 
 	public Session getCurrentSession() {
         return sessionFactory.getCurrentSession();
-    }
+    }	
 	
+	@Transactional
 	public Gestante salvar(Gestante gestante) {
+		getCurrentSession().saveOrUpdate(gestante.getUsuario());
 		getCurrentSession().saveOrUpdate(gestante);
 		return gestante;
 	}

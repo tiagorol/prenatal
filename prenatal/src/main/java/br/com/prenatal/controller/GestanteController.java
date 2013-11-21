@@ -82,6 +82,7 @@ public class GestanteController {
 		// userService.saveUser(user);
 		System.out.println(gestante + "Cheguei aqui..");
 		model.addAttribute("message", "Success");
+		gestanteService.salvar(gestante);
 		return "result";
 	}
 }
