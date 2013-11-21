@@ -42,6 +42,31 @@ CREATE SEQUENCE cidade_id_seq
   START 1
   CACHE 1;
 ALTER TABLE cidade_id_seq
+  OWNER TO root; 
+  
+--USUARIO
+CREATE TABLE usuario
+(
+  id bigint NOT NULL,
+  ativo boolean NOT NULL,
+  email character varying(255) NOT NULL,
+  root boolean NOT NULL,
+  senha character varying(40) NOT NULL,
+  CONSTRAINT usuario_pkey PRIMARY KEY (id)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE usuario
+  OWNER TO root;
+
+  CREATE SEQUENCE usuario_id_seq
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 9223372036854775807
+  START 1
+  CACHE 1;
+ALTER TABLE usuario_id_seq
   OWNER TO root;  
 
   --GESTANTE 
@@ -78,27 +103,3 @@ ALTER TABLE gestante
 ALTER TABLE gestante_id_seq
 OWNER TO root;
 
---USUARIO
-CREATE TABLE usuario
-(
-  id bigint NOT NULL,
-  ativo boolean NOT NULL,
-  email character varying(255) NOT NULL,
-  root boolean NOT NULL,
-  senha character varying(40) NOT NULL,
-  CONSTRAINT usuario_pkey PRIMARY KEY (id)
-)
-WITH (
-  OIDS=FALSE
-);
-ALTER TABLE usuario
-  OWNER TO root;
-
-  CREATE SEQUENCE usuario_id_seq
-  INCREMENT 1
-  MINVALUE 1
-  MAXVALUE 9223372036854775807
-  START 1
-  CACHE 1;
-ALTER TABLE usuario_id_seq
-  OWNER TO root;
