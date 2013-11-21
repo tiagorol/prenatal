@@ -13,6 +13,7 @@ import br.com.prenatal.entity.Cidade;
 import br.com.prenatal.entity.Gestante;
 import br.com.prenatal.entity.enumeration.EstadoCivil;
 import br.com.prenatal.entity.enumeration.GrauEscolaridade;
+import br.com.prenatal.service.CidadesService;
 import br.com.prenatal.service.EstadosService;
 import br.com.prenatal.service.GestanteService;
 
@@ -26,24 +27,11 @@ public class GestanteController {
 	@Autowired
 	private EstadosService estadoService;
 	
+	@Autowired
+	private CidadesService cidadeService;
+	
 	@RequestMapping(value = "prepararInserir", method = RequestMethod.GET)
 	public String salvar(ModelMap model) {
-	
-
-		Cidade cd1 = new Cidade();
-
-		cd1.setId(1L);
-		cd1.setNome("Fortaleza");
-
-		Cidade cd2 = new Cidade();
-
-		cd2.setId(2L);
-		cd2.setNome("Paraiba");
-		
-		List<Cidade> listaCidade = new ArrayList<Cidade>();
-		
-		listaCidade.add(cd1);
-		listaCidade.add(cd2);
 		
 		List<EstadoCivil> listaEstadoCivil = new ArrayList<EstadoCivil>();
 		
@@ -60,7 +48,7 @@ public class GestanteController {
 		model.addAttribute("gestante", new Gestante());
 		model.addAttribute("listaEstadoCivil",EstadoCivil.values());
 		model.addAttribute("listaGrauEscolaridade",GrauEscolaridade.values());
-		model.addAttribute("listaCidade",listaCidade);
+		model.addAttribute("listaCidade",cidadeService.buscarTodas());
 		model.addAttribute("listaEstado", estadoService.buscarTodos());
 		return "gestante/gestanteForm";
 	}
@@ -71,6 +59,7 @@ public class GestanteController {
 		System.out.println(gestante + "Cheguei aqui..");
 		model.addAttribute("message", "Success");
 		gestanteService.salvar(gestante);
+		
 		return "result";
 	}
 }

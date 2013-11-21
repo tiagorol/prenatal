@@ -8,10 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import br.com.prenatal.entity.Estado;
+import br.com.prenatal.entity.Cidade;
 
 @Service
-public class EstadosService {
+public class CidadesService {
 
 	@Autowired
 	public SessionFactory sessionFactory;
@@ -22,8 +22,8 @@ public class EstadosService {
 	
 	@SuppressWarnings("unchecked")
 	@Transactional(readOnly = true)
-	public List<Estado> buscarTodos() {
-		return getCurrentSession().createQuery("SELECT est FROM Estado est").list();
+	public List<Cidade> buscarTodas() {
+		return getCurrentSession().createQuery("SELECT est FROM Cidade est").list();
 	}
 
 }
