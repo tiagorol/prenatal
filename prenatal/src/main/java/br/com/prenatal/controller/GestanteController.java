@@ -2,9 +2,13 @@ package br.com.prenatal.controller;
 
 import java.util.List;
 
+import javax.naming.Binding;
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -43,8 +47,11 @@ public class GestanteController {
 	}
 
 	@RequestMapping(value = "salvar", method = RequestMethod.POST)
-	public String salvar(Gestante gestante, ModelMap model) {
+	public String salvar(@Valid Gestante gestante, BindingResult result, ModelMap model) {
 		// userService.saveUser(user);
+		if (result.hasFieldErrors()) {
+			return "gestante/gestanteForm";		
+		}
 		System.out.println(gestante + "Cheguei aqui..");
 		model.addAttribute("message", "Success");
 		gestanteService.salvar(gestante);
