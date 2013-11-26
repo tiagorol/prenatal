@@ -1,0 +1,21 @@
+@CHARSET "ISO-8859-1";
+
+label {
+	display:block;
+	width: 120px;
+	float: left;
+	clear: left;
+}
+input,select {
+	display: block;
+	width: 200px;
+	float: left;
+	clear: right;
+}
+button{
+	display: block;
+	clear: both;
+	position: relative;
+	width: 100px;
+	left: 224px;
+}

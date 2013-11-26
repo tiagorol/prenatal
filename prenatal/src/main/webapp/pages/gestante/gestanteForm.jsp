@@ -7,90 +7,86 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>prenatal</title>
+
+<style type="text/css">
+label {
+	display:block;
+	width: 120px;
+	float: left;
+	clear: left;
+}
+input,select {
+	display: block;
+	width: 200px;
+	float: left;
+	clear: right;
+}
+button{
+	display: block;
+	clear: both;
+	position: relative;
+	width: 100px;
+	left: 224px;
+}
+</style>
+
 </head>
 <body>
 	<div>
 		<form:form modelAttribute="gestante"
 			action="/prenatal/gestante/salvar" method="post">
-			<table>
-				<tr>
-					<td><form:label path="nome"> Nome : </form:label></td>
-					<td><form:input path="nome" /></td>
-				</tr>
-				<tr>
-					<td><form:label path="cpf"> CPF  : </form:label></td>
-					<td><form:input path="cpf" /></td>
-				</tr>
-				<tr>
-					<td><form:label path="rg"> RG : </form:label></td>
-					<td><form:input path="rg" /></td>
-				</tr>
-				<tr>
-					<td><form:label path="dataNascimento"> Data Nascimento : </form:label></td>
-					<td><form:input path="dataNascimento" /></td>
-				</tr>
 
-				<tr>
-					<td><form:label path="EstadoCivil"> Estado Civil : </form:label></td>
-					<td><form:select path="EstadoCivil">
-							<form:options items="${listaEstadoCivil}" />
+			<form:label path="nome"> Nome : </form:label>
+			<form:input path="nome" />
 
-						</form:select>
-				</tr>
-				<tr>			
-					<td><form:label path="escolaridade"> Escolaridade : </form:label></td>
-					<td><form:select path="escolaridade">
-							<form:options items="${listaGrauEscolaridade}" />
+			<form:label path="cpf"> CPF  : </form:label>
+			<form:input path="cpf" />
 
-						</form:select>
-				</tr>	
-				
-				<tr>
-				<tr>
-					<td><form:label path="logradouro"> Logradouro : </form:label></td>
-					<td><form:input path="logradouro" /></td>
-				</tr>
-				<tr>
-					<td><form:label path="bairro"> Bairro : </form:label></td>
-					<td><form:input path="bairro" /></td>
-				</tr>
+			<form:label path="rg"> RG : </form:label>
+			<form:input path="rg" />
 
-				<tr>
-					<td><form:label path="cidade.id"> Cidade : </form:label></td>
-					<td><form:select path="cidade.id">
-							<form:options items="${listaCidade}" itemLabel="nome"
-								itemValue="id" />
+			<form:label path="dataNascimento"> Data Nascimento : </form:label>
+			<form:input path="dataNascimento" />
 
-						</form:select>
-				</tr>
+			<form:label path="EstadoCivil"> Estado Civil : </form:label>
+			<form:select path="EstadoCivil">
+				<form:options items="${listaEstadoCivil}" itemLabel="estadoCivil" />
+			</form:select>
 
-				<tr>
-					<td><form:label path="estado.id"> Estado : </form:label></td>
+			<form:label path="escolaridade"> Escolaridade : </form:label>
+			<form:select path="escolaridade">
+				<form:options items="${listaGrauEscolaridade}"
+					itemLabel="grauEscolaridade" />
+			</form:select>
 
-					<td><form:select path="estado.id">
-							<form:options items="${listaEstado}" itemLabel="nome"
-								itemValue="id" />
+			<form:label path="logradouro"> Logradouro : </form:label>
+			<form:input path="logradouro" />
 
-						</form:select></td>
-				</tr>
+			<form:label path="bairro"> Bairro : </form:label>
+			<form:input path="bairro" />
 
-				<tr>
-					<td><form:label path="profissao"> Profissão : </form:label></td>
-					<td><form:input path="profissao" /></td>
-				</tr>
-				<tr>
-					<td><form:label path="usuario.email"> E-mail : </form:label></td>
-					<td><form:input path="usuario.email" /></td>
-				</tr>
-				<tr>
-					<td><form:label path="usuario.senha"> Senha : </form:label></td>
-					<td><form:password path="usuario.senha" /></td>
-				</tr>
-				<tr>
-					<td colspan="2"><button type="submit" id="salvar">
-							Salvar</button></td>
-				</tr>				
-			</table>
+			<form:label path="cidade.id"> Cidade : </form:label>
+			<form:select path="cidade.id">
+
+				<form:options items="${listaCidade}" itemLabel="nome" itemValue="id" />
+			</form:select>
+
+			<form:label path="estado.id"> Estado : </form:label>
+			<form:select path="estado.id">
+				<form:options items="${listaEstado}" itemLabel="nome" itemValue="id" />
+			</form:select>
+
+			<form:label path="profissao"> Profissão : </form:label>
+			<form:input path="profissao" />
+
+			<form:label path="usuario.email"> E-mail : </form:label>
+			<form:input path="usuario.email" />
+
+			<form:label path="usuario.senha"> Senha : </form:label>
+			<form:password path="usuario.senha" />
+
+			<button type="submit" id="salvar">Salvar</button>
+
 		</form:form>
 	</div>
 

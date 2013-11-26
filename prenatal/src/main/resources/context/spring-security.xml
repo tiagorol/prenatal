@@ -9,8 +9,9 @@
 
     <http use-expressions="true" auto-config="true" >
     
+    	<intercept-url pattern="/**" access="permitAll" />
+    
         <intercept-url pattern="/pages/**" access="isAuthenticated()" />
-<!--         <intercept-url pattern="/**" access="permitAll" /> -->
         
         <form-login login-page="/login.jsp" />
         

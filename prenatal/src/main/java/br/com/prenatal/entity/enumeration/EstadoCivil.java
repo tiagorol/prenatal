@@ -1,21 +1,16 @@
 package br.com.prenatal.entity.enumeration;
 
 public enum EstadoCivil {
-	SOLTEIRO, CASADO, DIVORCIADO, VIUVO;
+	SOLTEIRO("Solteiro"), CASADO("Casado"), DIVORCIADO("Divorciado"), VIUVO("Viuvo");
 	
-	public String toString() {
-		switch (this) {
-		case SOLTEIRO:			
-			return "Solteiro";
-		case CASADO:			
-			return "Casado";
-		case DIVORCIADO:			
-			return "Divorciado";
-		case VIUVO:			
-			return "Viuvo";
-		default:
-			return null;
-		}
-	};
+	private final String estadoCivil;
+	
+	private EstadoCivil(String estadoCivil){		
+		this.estadoCivil = estadoCivil;
+	}
+	
+	public String getEstadoCivil(){
+		return estadoCivil;
+	}
 }
  
