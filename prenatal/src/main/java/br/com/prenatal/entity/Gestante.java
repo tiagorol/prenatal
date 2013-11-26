@@ -14,6 +14,9 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import br.com.prenatal.entity.enumeration.EstadoCivil;
 import br.com.prenatal.entity.enumeration.GrauEscolaridade;
 import br.com.prenatal.entity.user.model.BaseEntity;
@@ -57,12 +60,13 @@ public class Gestante extends BaseEntity {
 	@Size(min = 11, max = 15)
 	private String cpf;
 
-	@NotNull
+	@NotEmpty
 	@Size(max = 20)
 	private String rg;
 
-	@NotNull
+	@NotEmpty
 	@Temporal(TemporalType.DATE)
+	@DateTimeFormat(pattern = "dd/MM/yyyy") 
 	@Column(name = "data_nascimento")
 	private Date dataNascimento;
 

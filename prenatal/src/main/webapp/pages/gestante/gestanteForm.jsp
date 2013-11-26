@@ -40,19 +40,19 @@ button{
 
 			<form:label path="nome"> Nome : </form:label>
 			<form:input path="nome" />
-			<form:errors path="nome" cssStyle="color:red"/>
+			<form:errors path="nome" cssStyle="color:red" />
 			
 			<form:label path="cpf"> CPF  : </form:label>
 			<form:input path="cpf" />
-			<form:errors path="cpf" cssStyle="color:red"/>
+			<form:errors path="cpf" cssStyle="color:red" />
 			
 			<form:label path="rg"> RG : </form:label>
 			<form:input path="rg" />
-			<form:errors path="rg" cssStyle="color:red"/>
+			<form:errors path="rg" />
 			
 			<form:label path="dataNascimento"> Data Nascimento : </form:label>
 			<form:input path="dataNascimento" />
-			<form:errors path="dataNascimento" cssStyle="color:red"/>
+			<form:errors path="dataNascimento" cssStyle="color:blue"/>
 			
 			<form:label path="EstadoCivil"> Estado Civil : </form:label>
 			<form:select path="EstadoCivil">
