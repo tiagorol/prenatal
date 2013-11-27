@@ -64,7 +64,7 @@ public class Gestante extends BaseEntity {
 	@Size(max = 20)
 	private String rg;
 
-	@NotEmpty
+	@NotNull
 	@Temporal(TemporalType.DATE)
 	@DateTimeFormat(pattern = "dd/MM/yyyy") 
 	@Column(name = "data_nascimento")

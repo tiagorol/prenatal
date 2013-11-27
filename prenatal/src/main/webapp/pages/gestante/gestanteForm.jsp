@@ -52,7 +52,7 @@ button{
 			
 			<form:label path="dataNascimento"> Data Nascimento : </form:label>
 			<form:input path="dataNascimento" />
-			<form:errors path="dataNascimento" cssStyle="color:blue"/>
+			<form:errors path="dataNascimento" cssStyle="color:red" />
 			
 			<form:label path="EstadoCivil"> Estado Civil : </form:label>
 			<form:select path="EstadoCivil">
