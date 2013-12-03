@@ -69,6 +69,20 @@ public class Gestante extends BaseEntity {
 	@DateTimeFormat(pattern = "dd/MM/yyyy") 
 	@Column(name = "data_nascimento")
 	private Date dataNascimento;
+	
+	@NotNull
+	@Temporal(TemporalType.DATE)
+	@DateTimeFormat(pattern = "dd/MM/yyyy") 
+	@Column(name = "data_ultima_mestruacao")
+	private Date dataUltimaMestruacao;
+
+	public Date getDataUltimaMestruacao() {
+		return dataUltimaMestruacao;
+	}
+
+	public void setDataUltimaMestruacao(Date dataUltimaMestruacao) {
+		this.dataUltimaMestruacao = dataUltimaMestruacao;
+	}
 
 	@NotNull
 	@ManyToOne(fetch = FetchType.LAZY)

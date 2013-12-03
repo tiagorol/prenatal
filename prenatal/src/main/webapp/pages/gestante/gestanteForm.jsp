@@ -29,6 +29,14 @@ button{
 	width: 100px;
 	left: 224px;
 }
+span{
+
+display: block;
+float: left;
+clear: both;
+
+}
+
 
 </style>
 
@@ -97,6 +105,10 @@ button{
 			
 			<form:label path="usuario.senha"> Senha : </form:label>
 			<form:password path="usuario.senha" />
+			
+			<form:label path="dataUltimaMestruacao"> Data Ultima Mestruação : </form:label>
+			<form:input path="dataUltimaMestruacao" />
+			<form:errors path="dataUltimaMestruacao" cssStyle="color:red" />
 			
 			
 			<button type="submit" id="salvar">Salvar</button>

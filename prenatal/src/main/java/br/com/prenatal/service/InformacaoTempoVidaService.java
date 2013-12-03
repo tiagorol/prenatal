@@ -5,28 +5,24 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import br.com.prenatal.entity.Gestante;
+
+import br.com.prenatal.entity.InformacaoTempoVida;
 
 @Service
-public class GestanteService {
-
+public class InformacaoTempoVidaService {
+	
 	@Autowired
 	public SessionFactory sessionFactory;
 
 	public Session getCurrentSession() {
-		return sessionFactory.getCurrentSession();
-	}
-
+        return sessionFactory.getCurrentSession();
+    }	
+	
 	@Transactional
-	public Gestante salvar(Gestante gestante) {
-		getCurrentSession().saveOrUpdate(gestante.getUsuario());
-		getCurrentSession().saveOrUpdate(gestante);
-		return gestante;
+	public InformacaoTempoVida salvar(InformacaoTempoVida informacaoTempoVida) {
+		getCurrentSession().saveOrUpdate(informacaoTempoVida);
+		return informacaoTempoVida;
 	}
-
-	public int calcularData() {
-		
-		return 0;
-	}
+	
 
 }

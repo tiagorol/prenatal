@@ -32,6 +32,7 @@
     	        <value>br.com.prenatal.entity.Cidade</value>
     	        <value>br.com.prenatal.entity.Estado</value>
     	        <value>br.com.prenatal.entity.Gestante</value>
+    	        <value>br.com.prenatal.entity.InformacaoTempoVida</value>
     	    </list>    	     
     	</property>
     	<property name="hibernateProperties">

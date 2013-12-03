@@ -82,11 +82,11 @@ ALTER TABLE usuario_id_seq
   cpf Varchar(15) NOT NULL,
   rg Varchar(20) NOT NULL,
   data_nascimento date NOT NULL,
+  data_ultima_mestruacao date NOT NULL,
   estado_id bigint NOT NULL REFERENCES estado(id),
   cidade_id bigint NOT NULL REFERENCES cidade(id),
   usuario_id bigint NOT NULL REFERENCES usuario(id),
   CONSTRAINT gestante_pkey PRIMARY KEY (id)
-  
 )
 WITH (
   OIDS=FALSE
@@ -94,7 +94,7 @@ WITH (
 ALTER TABLE gestante
   OWNER TO root;
 
-  CREATE SEQUENCE gestante_id_seq
+CREATE SEQUENCE gestante_id_seq
   INCREMENT 1
   MINVALUE 1
   MAXVALUE 9223372036854775807
@@ -103,3 +103,20 @@ ALTER TABLE gestante
 ALTER TABLE gestante_id_seq
 OWNER TO root;
 
+--InformaçãoTempoVida
+CREATE TABLE informacao_tempo_vida(
+  id bigint NOT NULL,
+  quantidade_semanas integer NOT NULL,
+  conteudo text NOT NULL,
+  CONSTRAINT informacao_tempo_vida_pkey PRIMARY KEY (id)
+)
+
+CREATE SEQUENCE informacao_tempo_vida_id_seq
+ 
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 9223372036854775807
+  START 1
+  CACHE 1;
+ALTER TABLE informacao_tempo_vida_id_seq
+OWNER TO root;
