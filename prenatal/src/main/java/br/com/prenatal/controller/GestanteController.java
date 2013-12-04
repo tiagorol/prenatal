@@ -38,20 +38,20 @@ public class GestanteController {
 	public String salvar(ModelMap model) {
 				
 		model.addAttribute("gestante", new Gestante());
-			return "gestante/gestanteForm";
+			return "/pages/gestante/gestanteForm";
 	}
 
 	@RequestMapping(value = "salvar", method = RequestMethod.POST)
 	public String salvar(@Valid Gestante gestante, BindingResult result, ModelMap model) {
 		
 		if (result.hasFieldErrors()) {
-			return "gestante/gestanteForm";
+			return "/pages/gestante/gestanteForm";
 		}
 		System.out.println(gestante + "Cheguei aqui..");
 		model.addAttribute("message", "Success");
 		gestanteService.salvar(gestante);
 		
-		return "result";
+		return "/pages/result";
 	}
 	
 	@ModelAttribute("listaEstadoCivil")

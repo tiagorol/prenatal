@@ -23,7 +23,7 @@ public class CidadesService {
 	@SuppressWarnings("unchecked")
 	@Transactional(readOnly = true)
 	public List<Cidade> buscarTodas() {
-		return getCurrentSession().createQuery("SELECT est FROM Cidade est").list();
+		return getCurrentSession().createQuery("SELECT cid FROM Cidade cid").list();
 	}
 
 }

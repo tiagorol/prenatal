@@ -3,6 +3,9 @@ package br.com.prenatal.entity;
 import java.util.Collection;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
@@ -34,6 +37,9 @@ public class Usuario extends BaseEntity implements UserDetails{
 	
 	@NotNull
 	private Boolean root;
+	
+	@OneToOne(fetch = FetchType.EAGER,mappedBy="usuario")
+	private Gestante gestante;
 	
 	@Transient
 	private Collection<GrantedAuthority> authorities;

@@ -8,6 +8,7 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -76,21 +77,12 @@ public class Gestante extends BaseEntity {
 	@Column(name = "data_ultima_mestruacao")
 	private Date dataUltimaMestruacao;
 
-	public Date getDataUltimaMestruacao() {
-		return dataUltimaMestruacao;
-	}
-
-	public void setDataUltimaMestruacao(Date dataUltimaMestruacao) {
-		this.dataUltimaMestruacao = dataUltimaMestruacao;
-	}
-
 	@NotNull
 	@ManyToOne(fetch = FetchType.LAZY)
 	private Cidade cidade;
 
 	@NotNull
-	@ManyToOne(fetch = FetchType.LAZY)
-	
+	@OneToOne(fetch = FetchType.EAGER)
 	private Usuario usuario;
 		
 	public String getNome() {
@@ -187,6 +179,13 @@ public class Gestante extends BaseEntity {
 
 	public void setEscolaridade(GrauEscolaridade escolaridade) {
 		this.escolaridade = escolaridade;
+	}
+	public Date getDataUltimaMestruacao() {
+		return dataUltimaMestruacao;
+	}
+
+	public void setDataUltimaMestruacao(Date dataUltimaMestruacao) {
+		this.dataUltimaMestruacao = dataUltimaMestruacao;
 	}
 	
 }

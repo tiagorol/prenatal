@@ -20,7 +20,12 @@ public class LoginController {
 	public String logar(@RequestParam(value = "email") String email, @RequestParam(value = "senha") String senha, ModelMap model) {
 		boolean success = authenticationService.login(email, senha);
 		model.addAttribute("message", "Success");
-		return success ? "index" : "login";
+		return success ? "/pages/index" : "/login";
 	}
 
+	@RequestMapping(value = "logout", method = RequestMethod.GET)
+	public String logout(){
+		authenticationService.logout();
+		return "/login";
+	}
 }
