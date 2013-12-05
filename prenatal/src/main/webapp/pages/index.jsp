@@ -11,9 +11,10 @@
 <body>
 
 <h2>Hello World!#</h2>
-<a href="/prenatal/login/logout">Sair</a>
 
-<form:input path="${listaEstado}"/>
+<a href="/prenatal/informacaoTempoVida/listar" >Informação Tempo Vida</a>
+
+<a href="/prenatal/login/logout">Sair</a>
 
 </body>
 </html>
