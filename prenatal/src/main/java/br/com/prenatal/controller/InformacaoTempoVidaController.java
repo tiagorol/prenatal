@@ -1,6 +1,5 @@
 package br.com.prenatal.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -44,11 +43,8 @@ public class InformacaoTempoVidaController {
 	
 	@RequestMapping(value = "listar", method = RequestMethod.GET)
 	public ModelAndView listar() {
-		List<InformacaoTempoVida> lista = new ArrayList<InformacaoTempoVida>();
-		InformacaoTempoVida informacaoTempoVida = new InformacaoTempoVida();
-		informacaoTempoVida.setConteudo("blablabla");
-		informacaoTempoVida.setQuantidadeSemanas(10);
-		lista.add(informacaoTempoVida);
+		List<InformacaoTempoVida> lista = informacaoTempoVidaService.buscarTodos();
+		
 		ModelAndView modelAndView = new ModelAndView("/pages/informacaoTempoVida/informacaoTempoVidaList");  
         modelAndView.addObject("listaInformacaoTempoVida", lista);
 		return modelAndView;
