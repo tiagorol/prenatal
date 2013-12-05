@@ -15,6 +15,7 @@
 <tr>
 <th width="50%">Conteúdo</th>
 <th width="20%">Quantidade Semana</th>
+<th width="10%">Ações</th>
 </tr>
 </thead>
 <tbody>
@@ -22,6 +23,7 @@
 		<tr>
 			<td>${informacaoTempoVida.conteudo}</td>
 			<td>${informacaoTempoVida.quantidadeSemanas}</td>
+			<td><a href="/prenatal/informacaoTempoVida/remover/${informacaoTempoVida.id}">Remover</a></td>
 		</tr>
 	</c:forEach>
 </tbody>
