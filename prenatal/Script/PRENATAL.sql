@@ -120,3 +120,21 @@ CREATE SEQUENCE informacao_tempo_vida_id_seq
   CACHE 1;
 ALTER TABLE informacao_tempo_vida_id_seq
 OWNER TO root;
+
+--pendencias
+CREATE TABLE pendencias(
+  id bigint NOT NULL,
+  titulo varchar(250) NOT NULL,
+  semana integer NOT NULL,
+  CONSTRAINT pendencias_pkey PRIMARY KEY (id)
+)
+
+CREATE SEQUENCE pendencias_id_seq
+ 
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 9223372036854775807
+  START 1
+  CACHE 1;
+ALTER TABLE pendencias_id_seq
+OWNER TO root;

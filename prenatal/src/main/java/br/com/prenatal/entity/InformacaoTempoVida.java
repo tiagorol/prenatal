@@ -15,7 +15,7 @@ import br.com.prenatal.entity.user.model.BaseEntity;
 @SequenceGenerator(name = "SEQUENCE", sequenceName = "informacao_tempo_vida_id_seq")
 public class InformacaoTempoVida extends BaseEntity {
 
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 7889175566500659842L;
 
 	@NotEmpty
 	private String conteudo;
