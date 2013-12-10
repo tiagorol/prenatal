@@ -24,7 +24,11 @@
 		<tr>
 			<td>${pendencias.titulo}</td>
 			<td>${pendencias.semana}</td>
-			<td><a href="/prenatal/pendencias/remover/${pendencias.id}">Remover</a></td>			
+			<td>
+				<a href="/prenatal/pendencias/remover/${pendencias.id}">Remover</a>
+				<a href="/prenatal/pendencias/prepararEditar/${pendencias.id}">Editar</a>
+			</td>
+				
 		</tr>
 	</c:forEach>	
 </tbody>

@@ -1,7 +1,5 @@
 package br.com.prenatal.service;
 
-import javax.persistence.NoResultException;
-
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

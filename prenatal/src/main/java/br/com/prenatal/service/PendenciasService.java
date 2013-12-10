@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import br.com.prenatal.entity.Pendencias;
+import br.com.prenatal.entity.Usuario;
 
 @Service
 public class PendenciasService {
@@ -32,16 +33,15 @@ public class PendenciasService {
 		return getCurrentSession().createQuery("SELECT pen FROM Pendencias pen").list();
 	}
 	@Transactional
-	public void removerServive(Long id) {
-		Query query = getCurrentSession().createQuery("DELETE FROM Pendencias WHERE id = :id");
-        query.setParameter("id", id);
-		query.executeUpdate();
-				
+	public void removerServive(Pendencias pendencias) {
+		getCurrentSession().delete(pendencias);	
 	}
-	@Transactional
-	public void editarService(Pendencias pendencias){
-		getCurrentSession().saveOrUpdate(pendencias);
-	}
+	@Transactional(readOnly = true)
+	public Pendencias buscarPorId(Long id){
+		Query query = getCurrentSession().createQuery("SELECT pen FROM Pendencias pen WHERE id = :id");
+		query.setParameter("id", id);
+		return (Pendencias) query.uniqueResult();
+	};
 	
-  
+				  
 }

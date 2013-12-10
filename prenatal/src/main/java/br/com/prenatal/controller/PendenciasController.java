@@ -54,14 +54,15 @@ public class PendenciasController {
 	}
 	@RequestMapping(value = "/remover/{id}", method = RequestMethod.GET)
 	private ModelAndView remover(@PathVariable Long id) {
-		pendenciasService.removerServive(id);
+		pendenciasService.removerServive(new Pendencias(id));
 		return listar();
 
      }
-	@RequestMapping (value = "/editar/ {id}" ,  method= RequestMethod.GET)
-    public  ModelAndView  editar(@PathVariable  Long  id )  {
-           
-           // ModelAndView.addObject ( "listapendecias",listar);
-            return  listar();
-    }
+	@RequestMapping (value = "/prepararEditar/{id}", method= RequestMethod.GET)
+	public String editar(ModelMap model, @PathVariable Long id) {
+
+		model.addAttribute("pendencias", pendenciasService.buscarPorId(id));
+		return "/pages/pendencias/pendenciasForm";
+	}
+
 }

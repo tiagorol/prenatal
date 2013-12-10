@@ -34,10 +34,13 @@ button{
 
 </head>
 <body>
+<h1>Cadastro de Pendências</h1>
 	<div>
 		<form:form modelAttribute="pendencias"
 			action="/prenatal/pendencias/salvar" method="post">
-
+			
+			<form:input path="id" cssStyle="display: none;"/>
+			
 			<form:label path="semana"> Semana : </form:label>
 			<form:input path="semana" />
 			<form:errors path="semana" cssStyle="color:red" />
@@ -49,6 +52,7 @@ button{
 			<button type="submit" id="salvar">Salvar</button>
 
 		</form:form>
+		<a href="/prenatal/pendencias/listar">Voltar</a>
 	</div>
 
 </body>

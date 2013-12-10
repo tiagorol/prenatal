@@ -49,7 +49,7 @@ clear: both;
 			<form:label path="nome"> Nome : </form:label>
 			<form:input path="nome" />
 			<form:errors path="nome" cssStyle="color:red" />
-			
+						
 			<form:label path="cpf"> CPF  : </form:label>
 			<form:input path="cpf" />
 			<form:errors path="cpf" cssStyle="color:red" />
