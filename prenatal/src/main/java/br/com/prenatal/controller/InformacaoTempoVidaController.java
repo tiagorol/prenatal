@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -25,20 +26,20 @@ public class InformacaoTempoVidaController {
 	@RequestMapping(value = "prepararInserir", method = RequestMethod.GET)
 	public String salvar(ModelMap model) {
 		model.addAttribute("informacaoTempoVida", new InformacaoTempoVida());
-		return "informacaoTempoVida/informacaoTempoVidaForm";
+		return "/pages/informacaoTempoVida/informacaoTempoVidaForm";
 	}
 
 	@RequestMapping(value = "salvar", method = RequestMethod.POST)
 	public String salvar(@Valid InformacaoTempoVida informacaoTempoVida, BindingResult result, ModelMap model) {
 
 		if (result.hasFieldErrors()) {
-			return "informacaoTempoVida/informacaoTempoVidaForm";
+			return "/pages/informacaoTempoVida/informacaoTempoVidaForm";
 		}
 		System.out.println(informacaoTempoVida + "Cheguei aqui..");
 		model.addAttribute("message", "Success");
 		informacaoTempoVidaService.salvar(informacaoTempoVida);
 
-		return "result";
+		return "/pages/result";
 	}
 	
 	@RequestMapping(value = "listar", method = RequestMethod.GET)
@@ -48,6 +49,11 @@ public class InformacaoTempoVidaController {
 		ModelAndView modelAndView = new ModelAndView("/pages/informacaoTempoVida/informacaoTempoVidaList");  
         modelAndView.addObject("listaInformacaoTempoVida", lista);
 		return modelAndView;
+	}
+	@RequestMapping(value = "/remover/{id}", method = RequestMethod.GET)
+	private ModelAndView remover(@PathVariable Long id) {
+		informacaoTempoVidaService.removerServive(id);
+		return listar();
 	}
 
 }

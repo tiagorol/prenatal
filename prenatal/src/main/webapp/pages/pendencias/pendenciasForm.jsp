@@ -42,7 +42,7 @@ button{
 			<form:input path="semana" />
 			<form:errors path="semana" cssStyle="color:red" />
 			
-			<form:label path="titulo"> titulo  : </form:label>
+			<form:label path="titulo"> Titulo  : </form:label>
 			<form:input path="titulo" />
 			<form:errors path="titulo" cssStyle="color:red" />
 						

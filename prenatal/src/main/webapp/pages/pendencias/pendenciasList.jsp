@@ -8,29 +8,29 @@
 <title>List of teams</title>
 </head>
 <body>
-<h1>Lista de Informação Tempo de Vida</h1>
+<h1>Lista de Pendencias</h1>
 
 <table border="1px" cellpadding="0" cellspacing="0" >
 <thead>
 <tr>
 <th width="50%">Conteúdo</th>
-<th width="20%">Quantidade Semana</th>
+<th width="20%">Links</th>
 <th width="10%">Ações</th>
 
 </tr>
 </thead>
 <tbody>
-	<c:forEach var="informacaoTempoVida" items="${listaInformacaoTempoVida}">
+	<c:forEach var="pendencias" items="${listaPendencias}">
 		<tr>
-			<td>${informacaoTempoVida.conteudo}</td>
-			<td>${informacaoTempoVida.quantidadeSemanas}</td>
-			<td><a href="/prenatal/informacaoTempoVida/remover/${informacaoTempoVida.id}">Remover</a></td>
+			<td>${pendencias.titulo}</td>
+			<td>${pendencias.semana}</td>
+			<td><a href="/prenatal/pendencias/remover/${pendencias.id}">Remover</a></td>			
 		</tr>
 	</c:forEach>	
 </tbody>
 </table>
 
-<p><a href="/prenatal/informacaoTempoVida/prepararInserir">Novo</a></p>
+<p><a href="/prenatal/pendencias/prepararInserir">Novo</a></p>
 
 <p><a href="/prenatal/pages/index.jsp">Home page</a></p>
 

@@ -13,7 +13,7 @@
 <h2>Hello World!#</h2>
 
 <a href="/prenatal/informacaoTempoVida/listar" >Informação Tempo Vida</a>
-
+<a href="/prenatal/pendencias/listar" >Informação das Pendencias</a>
 <a href="/prenatal/login/logout">Sair</a>
 
 </body>
