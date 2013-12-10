@@ -31,17 +31,18 @@ public class PendenciasController {
 	}
 
 	@RequestMapping(value = "salvar", method = RequestMethod.POST)
-	public String salvar(@Valid Pendencias pendencias,
+	public ModelAndView salvar(@Valid Pendencias pendencias,
 			BindingResult result, ModelMap model) {
 
 		if (result.hasFieldErrors()) {
-			return "pendencias/pendenciasForm";
+			
+			return new ModelAndView("/pages/pendencias/pendenciasForm");
 		}
 		System.out.println(pendencias + "Cheguei aqui..");
 		model.addAttribute("message", "Success");
 		pendenciasService.salvar(pendencias);
 
-		return "/pages/result";
+		return listar();
 	}
 	@RequestMapping(value = "listar", method = RequestMethod.GET)
 	public ModelAndView listar() {

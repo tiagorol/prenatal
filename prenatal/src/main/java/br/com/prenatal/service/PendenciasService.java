@@ -36,10 +36,12 @@ public class PendenciasService {
 		Query query = getCurrentSession().createQuery("DELETE FROM Pendencias WHERE id = :id");
         query.setParameter("id", id);
 		query.executeUpdate();
+				
 	}
 	@Transactional
 	public void editarService(Pendencias pendencias){
 		getCurrentSession().saveOrUpdate(pendencias);
 	}
+	
   
 }
