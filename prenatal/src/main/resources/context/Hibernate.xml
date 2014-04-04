@@ -34,6 +34,7 @@
     	        <value>br.com.prenatal.entity.Gestante</value>
     	        <value>br.com.prenatal.entity.InformacaoTempoVida</value>
     	        <value>br.com.prenatal.entity.Pendencias</value>
+    	        <value>br.com.prenatal.entity.InformacaoParaVoce</value>
     	    </list>    	     
     	</property>
     	<property name="hibernateProperties">

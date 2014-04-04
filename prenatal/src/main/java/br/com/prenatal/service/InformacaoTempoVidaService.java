@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import br.com.prenatal.entity.InformacaoTempoVida;
-import br.com.prenatal.entity.Usuario;
 
 @Service
 public class InformacaoTempoVidaService {

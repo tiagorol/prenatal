@@ -21,12 +21,15 @@
 <!-- 		<property name="prefix" value="/pages/"/> -->
 		<property name="suffix" value=".jsp"/>
 	</bean>
-	
+			
 	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
 	   <property name="basenames">
 	       <list><value>classpath:messages</value></list>
 	   </property>
 	</bean>
+ 
+ 	<mvc:resources mapping="/resources/**" location="/resources/mytheme/" />
+ 	<mvc:annotation-driven />
  
  	<import resource="spring-security.xml" />
 </beans>

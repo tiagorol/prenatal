@@ -1,9 +1,8 @@
 package br.com.prenatal.controller;
 
 import java.util.List;
-
+import javax.jws.WebService;
 import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -11,7 +10,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
 import br.com.prenatal.entity.Cidade;
 import br.com.prenatal.entity.Estado;
 import br.com.prenatal.entity.Gestante;

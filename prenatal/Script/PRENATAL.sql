@@ -138,3 +138,27 @@ CREATE SEQUENCE pendencias_id_seq
   CACHE 1;
 ALTER TABLE pendencias_id_seq
 OWNER TO root;
+
+--INFORMACOES PARA VOCE
+
+CREATE TABLE informacao_para_voce
+(
+  id bigint NOT NULL,
+  descricao text NOT NULL,
+  conteudo text NOT NULL,
+  CONSTRAINT informacao_para_voce_pkey PRIMARY KEY (id)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE informacao_para_voce
+  OWNER TO postgres;
+
+CREATE SEQUENCE informacao_para_voce_id_seq
+  INCREMENT 1
+  MINVALUE 1
+  MAXVALUE 9223372036854775807
+  START 5
+  CACHE 1;
+ALTER TABLE informacao_para_voce_id_seq
+  OWNER TO root;
