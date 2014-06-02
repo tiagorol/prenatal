@@ -64,5 +64,7 @@ public class PendenciasController {
 		model.addAttribute("pendencias", pendenciasService.buscarPorId(id));
 		return "/pages/pendencias/pendenciasForm";
 	}
+	
+	
 
 }

@@ -36,7 +36,6 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
 		List<GrantedAuthority> grantedAuthorities = new ArrayList<GrantedAuthority>();
 //		List<Permissao> listPermissaoUsuario = null;
-
 //		if (usuario.getRoot()) {
 //			listPermissaoUsuario = usuarioService.findAllPermissao();
 //			listPermissaoUsuario.add(new Permissao(ADMIN_ROOT));

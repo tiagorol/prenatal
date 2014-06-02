@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import br.com.prenatal.entity.Pendencias;
-import br.com.prenatal.entity.Usuario;
 
 @Service
 public class PendenciasService {
@@ -36,6 +35,7 @@ public class PendenciasService {
 	public void removerServive(Pendencias pendencias) {
 		getCurrentSession().delete(pendencias);	
 	}
+	
 	@Transactional(readOnly = true)
 	public Pendencias buscarPorId(Long id){
 		Query query = getCurrentSession().createQuery("SELECT pen FROM Pendencias pen WHERE id = :id");

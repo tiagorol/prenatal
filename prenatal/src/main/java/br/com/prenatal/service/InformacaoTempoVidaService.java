@@ -31,10 +31,17 @@ public class InformacaoTempoVidaService {
 	public List<InformacaoTempoVida> buscarTodos() {
 		return getCurrentSession().createQuery("SELECT ift FROM InformacaoTempoVida ift").list();
 	}
+	
 	@Transactional
-	public void removerServive(Long id) {
-		Query query = getCurrentSession().createQuery("DELETE FROM InformacaoTempoVida WHERE id = :id");
-        query.setParameter("id", id);
-		query.executeUpdate();
+	public void removerServive(InformacaoTempoVida informacaoTempoVida) {
+		getCurrentSession().delete(informacaoTempoVida);	
 	}
+	
+	@Transactional(readOnly = true)
+	public InformacaoTempoVida buscarPorId(Long id){
+		Query query = getCurrentSession().createQuery("SELECT itp FROM InformacaoTempoVida itp WHERE id = :id");
+		query.setParameter("id", id);
+		return (InformacaoTempoVida) query.uniqueResult();
+	};
+	
 }

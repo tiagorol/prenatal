@@ -24,7 +24,10 @@
 		<tr>
 			<td>${informacaoTempoVida.conteudo}</td>
 			<td>${informacaoTempoVida.quantidadeSemanas}</td>
-			<td><a href="/prenatal/informacaoTempoVida/remover/${informacaoTempoVida.id}">Remover</a></td>
+			<td>
+			<a href="/prenatal/informacaoTempoVida/remover/${informacaoTempoVida.id}">Remover</a>
+			<a href="/prenatal/informacaoTempoVida/prepararEditar/${informacaoTempoVida.id}">Editar</a>
+			</td>
 		</tr>
 	</c:forEach>	
 </tbody>

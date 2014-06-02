@@ -1,7 +1,5 @@
 package br.com.prenatal.service;
 
-import javax.jws.WebService;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,9 +24,7 @@ public class GestanteService {
 		getCurrentSession().saveOrUpdate(gestante);
 		return gestante;
 	}
-
 	public int calcularData() {
-		
 		return 0;
 	}
 

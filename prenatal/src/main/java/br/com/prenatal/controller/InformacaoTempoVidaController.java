@@ -52,8 +52,14 @@ public class InformacaoTempoVidaController {
 	}
 	@RequestMapping(value = "/remover/{id}", method = RequestMethod.GET)
 	private ModelAndView remover(@PathVariable Long id) {
-		informacaoTempoVidaService.removerServive(id);
+		informacaoTempoVidaService.removerServive(new InformacaoTempoVida(id));
 		return listar();
+	}
+	@RequestMapping (value = "/prepararEditar/{id}", method= RequestMethod.GET)
+	public String editar(ModelMap model, @PathVariable Long id) {
+
+		model.addAttribute("informacaoTempoVida", informacaoTempoVidaService.buscarPorId(id));
+		return "/pages/informacaoTempoVida/informacaoTempoVidaForm";
 	}
 
 }

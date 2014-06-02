@@ -4,7 +4,6 @@ import java.util.Collection;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Transient;
@@ -19,6 +18,7 @@ import br.com.prenatal.entity.user.model.BaseEntity;
 
 @Entity
 @SequenceGenerator(name = "SEQUENCE", sequenceName = "usuario_id_seq")
+
 public class Usuario extends BaseEntity implements UserDetails{
 	
 	private static final long serialVersionUID = -3019482700805308903L;

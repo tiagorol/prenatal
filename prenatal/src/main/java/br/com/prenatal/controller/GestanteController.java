@@ -1,8 +1,9 @@
 package br.com.prenatal.controller;
 
 import java.util.List;
-import javax.jws.WebService;
+
 import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -10,6 +11,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
 import br.com.prenatal.entity.Cidade;
 import br.com.prenatal.entity.Estado;
 import br.com.prenatal.entity.Gestante;
@@ -32,6 +34,7 @@ public class GestanteController {
 	@Autowired
 	private CidadesService cidadeService;
 	
+	
 	@RequestMapping(value = "prepararInserir", method = RequestMethod.GET)
 	public String salvar(ModelMap model) {
 				
@@ -45,11 +48,11 @@ public class GestanteController {
 		if (result.hasFieldErrors()) {
 			return "/pages/gestante/gestanteForm";
 		}
-		System.out.println(gestante + "Cheguei aqui..");
+		
 		model.addAttribute("message", "Success");
 		gestanteService.salvar(gestante);
 		
-		return "/pages/result";
+		return "/login";
 	}
 	
 	@ModelAttribute("listaEstadoCivil")

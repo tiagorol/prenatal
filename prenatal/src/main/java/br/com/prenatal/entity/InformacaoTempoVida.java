@@ -23,6 +23,14 @@ public class InformacaoTempoVida extends BaseEntity {
 	@NotNull
 	@Column(name = "quantidade_semanas")
 	private Integer quantidadeSemanas;
+	
+	public InformacaoTempoVida(){
+		
+	}
+	
+public InformacaoTempoVida(Long id){
+		setId(id);
+	}
 
 	public String getConteudo() {
 		return conteudo;

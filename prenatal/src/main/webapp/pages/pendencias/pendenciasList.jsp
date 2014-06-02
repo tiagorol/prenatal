@@ -14,7 +14,7 @@
 <thead>
 <tr>
 <th width="50%">Conteúdo</th>
-<th width="20%">Links</th>
+<th width="20%">Semana</th>
 <th width="10%">Ações</th>
 
 </tr>

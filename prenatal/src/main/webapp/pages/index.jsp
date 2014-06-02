@@ -10,11 +10,13 @@
 </head>
 <body>
 
-<h2>Hello World!#</h2>
+<h2>Hello World!</h2>
 
 <a href="/prenatal/informacaoTempoVida/listar" >Informação Tempo Vida</a>
 <a href="/prenatal/pendencias/listar" >Informação das Pendencias</a>
-<a href="/prenatal/informacaoParaVoce/listar" >Informação Para Você</a>
+<a href="/prenatal/tipoAcao/listar" >Tipo Acão</a>
+<a href="/prenatal/acao/listar" >Acões</a>
+<a href="/prenatal/dicasSemana/listar" >Dicas Semana</a>
 <a href="/prenatal/login/logout">Sair</a>
 
 </body>
